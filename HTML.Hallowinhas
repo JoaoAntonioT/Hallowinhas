@@ -1,0 +1,210 @@
+Hallowinhas Site
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festa de Halloween</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #785abd;
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      border-bottom: 2px solid #a3e12b;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      width: 300px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      flex-direction: column;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 12px;
+      padding: 0.8rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      margin-bottom: 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 70vh;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .gallery-section {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+    }
+
+    .gallery-section h1 {
+      color: #a3e12b;
+      margin-bottom: 1rem;
+      font-size: 30px;
+    }
+
+    .grid-container {
+      columns: 2 150px;
+      column-gap: 2rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .grid-container div {
+      margin: 0 0 1rem;
+      display: inline-block;
+      width: 100%;
+      border: solid 2px black;
+      padding: 5px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      transition: all .25s ease-in-out;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .grid-container div:hover {
+      border-color: #a3e12b;
+    }
+
+    .grid-container img {
+      width: 100%;
+      border-radius: 5px;
+      transition: all .25s ease-in-out;
+      filter: grayscale(100%);
+    }
+
+    .grid-container div:hover img {
+      filter: grayscale(0);
+    }
+
+    .grid-container p {
+      margin: 5px 0 0;
+      padding: 0;
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 0.8rem;
+      }
+
+      .form-container {
+        padding: 0.5rem;
+        border-radius: 10px;
+      }
+
+      iframe {
+        min-height: 65vh;
+      }
+
+      .grid-container {
+        columns: 1 100px;
+      }
+    }
+
+    @media (min-width: 768px) {}
+      header img {
+        max-width: 300px;
+      }
+
+      iframe {
+        min-height: 85vh;
+      }
+
+      .grid-container {
+        columns: 3 200px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-container {
+        columns: 5 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://imgur.com/tInypMC.png" alt="Logo Hallowinhas">
+  </header>
+
+  <main>
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwzH20G3g2IXJyI0SyXxKko7pkCwOtJb4P1Xut5Rtbi7xPTg/viewform?embedded=true" width="640" height="1800px" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    </div>
+
+    <section class="gallery-section">
+      <h1>HALLOWINHAS 1.0</h1>
+      <div class="grid-container">
+        <div>
+          <img src="https://imgur.com/r4i8JsO.png" alt="Imagem Festa">
+          <p><br></p>
+        </div>
+        <div>
+          <img src="https://imgur.com/s75WWbz.png" alt="Imagem Festa">
+          <p><br></p>
+        </div>
+        <div>
+          <img src="https://imgur.com/geSBcGX.png" alt="Imagem Festa">
+          <p><br></p>
+
+        </div>
+        <div>
+          <img src="https://imgur.com/bQmjxGx.png" alt="Imagem Festa">
+          <p><br></p>
+
+        </div>
+        <div>
+          <img src="https://imgur.com/IPOmv7m.png" alt="Imagem Festa">
+          <p><br></p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Hallowinhas 2.0
+  </footer>
+</body>
+
+</html>
