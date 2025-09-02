@@ -22,12 +22,120 @@
       background: rgba(0, 0, 0, 0.7);
       border-bottom: 2px solid #a3e12b;
       text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     header img {
       max-width: 100%;
       height: auto;
-      width: 300px;
+      width: 280px;
+    }
+
+    nav {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1100;
+    }
+
+    #menuToggle {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 12px;
+      left: 5px;
+      z-index: 1200;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    #menuToggle input {
+      display: flex;
+      width: 40px;
+      top: -10px;
+      left: -10px;
+      height: 32px;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 1300;
+    }
+
+    #menuToggle span {
+      display: flex;
+      width: 29px;
+      height: 3px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #ffffff;
+      border-radius: 3px;
+      z-index: 1200;
+      transform-origin: 5px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+
+    #menuToggle input:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-3px, -1px);
+      background: #a3e12b;
+    }
+
+    #menuToggle input:checked~span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      margin: 0;
+      padding: 70px 30px;
+      background-color: #785abd;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+      list-style-type: none;
+      z-index: 1000;
+    }
+
+    #menu li {
+      padding: 12px 0;
+    }
+
+    #menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    #menu li a:hover {
+      color: #a3e12b;
+    }
+
+    #menuToggle input:checked~ul {
+      transform: none;
     }
 
     main {
@@ -37,6 +145,7 @@
       align-items: center;
       padding: 1rem;
       flex-direction: column;
+      padding-top: 90px;
     }
 
     .form-container {
@@ -137,7 +246,7 @@
       }
     }
 
-    @media (min-width: 768px) {}
+    @media (min-width: 768px) {
       header img {
         max-width: 300px;
       }
@@ -161,6 +270,19 @@
 
 <body>
   <header>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="#">Ingressos</a></li>
+          <li><a href="#fotos">Hallowinhas 1.0</a></li>
+          <li><a href="#">Ajuda</a></li>
+        </ul>
+      </div>
+    </nav>
     <img src="https://imgur.com/tInypMC.png" alt="Logo Hallowinhas">
   </header>
 
@@ -169,7 +291,7 @@
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwzH20G3g2IXJyI0SyXxKko7pkCwOtJb4P1Xut5Rtbi7xPTg/viewform?embedded=true" width="640" height="1800px" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </div>
 
-    <section class="gallery-section">
+    <section id="fotos" class="gallery-section">
       <h1>HALLOWINHAS 1.0</h1>
       <div class="grid-container">
         <div>
@@ -183,17 +305,14 @@
         <div>
           <img src="https://imgur.com/geSBcGX.png" alt="Imagem Festa">
           <p><br></p>
-
         </div>
         <div>
           <img src="https://imgur.com/bQmjxGx.png" alt="Imagem Festa">
           <p><br></p>
-
         </div>
         <div>
           <img src="https://imgur.com/IPOmv7m.png" alt="Imagem Festa">
           <p><br></p>
-
         </div>
       </div>
     </section>
